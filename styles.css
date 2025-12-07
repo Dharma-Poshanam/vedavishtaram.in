@@ -137,6 +137,12 @@ nav a:focus {
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+}
+
 nav {
     max-width: 1200px;
     margin: 0 auto;
