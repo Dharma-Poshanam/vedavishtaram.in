@@ -110,6 +110,18 @@
                 behavior: 'smooth'
             });
         });
+
+        // Auto-scroll to content on mobile after page load
+        if (window.innerWidth <= 768 && document.referrer && !window.location.hash) {
+            window.addEventListener('load', () => {
+                const mainContent = document.getElementById('main-content') || document.querySelector('.container');
+                if (mainContent) {
+                    setTimeout(() => {
+                        mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            });
+        }
     </script>
 
 </body>
