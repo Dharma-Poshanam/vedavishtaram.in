@@ -5,6 +5,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Tour - Veda Vishtaram</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .tour-hero {
+            background: linear-gradient(135deg, #1e5a8e 0%, #0d3a5c 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .tour-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        .tour-intro {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .tour-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .tour-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .tour-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        .tour-item-content {
+            padding: 20px;
+        }
+        .tour-item h3 {
+            color: #1e5a8e;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .tour-cta {
+            background: linear-gradient(135deg, #2c5f8d 0%, #1e4568 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .tour-cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        .tour-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .tour-cta-buttons a {
+            background: #ffd700;
+            color: #1a3a52;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .tour-cta-buttons a:hover {
+            background: #ffed4e;
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        .modal-title {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .modal-close:hover {
+            color: #ffd700;
+        }
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+        }
+        .modal-nav:hover {
+            color: #ffd700;
+        }
+        .modal-prev {
+            left: 20px;
+        }
+        .modal-next {
+            right: 20px;
+        }
+        @media (max-width: 768px) {
+            .tour-hero h1 {
+                font-size: 1.8em;
+            }
+            .tour-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-nav {
+                font-size: 40px;
+                padding: 10px;
+            }
+            .modal-close {
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="header-banner">
@@ -38,51 +205,282 @@
         </nav>
     </div>
 
-    <div class="container">
-        <section class="section">
-            <h2>Photo Tour</h2>
-            <p>Welcome to visit the Institution via this picture tour, which gives glimpses of the school in action including various allied programs.</p>
-        </section>
+    <div class="tour-hero">
+        <h1>Visual Tour of VVV वेदविज्ञान विष्टरम् - चित्राणि</h1>
+        <p style="font-size: 1.2em; margin-top: 10px;">Lalitaramam, Ganapti Temple Street, Datta Nagara, Mysore 570025 India</p>
+        <p style="font-size: 1.1em; margin-top: 10px;">WhatsApp: 9900082071 | Email: vedavishtaram@gmail.com</p>
+    </div>
+
+    <div class="tour-intro">
+        <p style="font-size: 1.2em; line-height: 1.8; text-align: center;">
+            Veda Vijnaana Vishtaram is a premier hub for Veda, Vedangas and Veda Bhashya in the Royal City of Mysore in Southern India. 
+            Located on the slopes of Sacred Chamundi Hills (4th among the 18 Shakti Peethas), provides free and quality education along 
+            with essentials such as food, clothes and basic medical care to about 70 students.
+        </p>
+        <p style="font-size: 1.2em; line-height: 1.8; text-align: center; margin-top: 20px; color: #1e5a8e; font-weight: bold;">
+            Welcome to the virtual tour of VVV and join the project to support our Dharmik heritage.
+        </p>
+    </div>
+
+    <div class="tour-grid">
+        <div class="tour-item">
+            <img src="images/tour/front1.jpg" alt="Front View 1">
+            <div class="tour-item-content">
+                <h3>Front View 1</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/front3.jpg" alt="Front View 3">
+            <div class="tour-item-content">
+                <h3>Front View 3</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/rigveda.jpg" alt="Rigveda & Sanskrit Classes">
+            <div class="tour-item-content">
+                <h3>Rigveda & Sanskrit Classes by A Chinmaya Datta</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/yajurveda.jpg" alt="Yajurveda Classes">
+            <div class="tour-item-content">
+                <h3>Yajurveda Classes by DH Prasanna</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/samaveda.jpg" alt="Sama Veda Classes">
+            <div class="tour-item-content">
+                <h3>Sama Veda Classes by K Chaitanya Kumar Shrouti</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/atharvaveda.jpg" alt="Atharva Veda Classes">
+            <div class="tour-item-content">
+                <h3>Atharva Veda Sanskrit Classes by K Surya Narayana & Omkar Ramdasi</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/parayanam.jpg" alt="Daily Veda Parayanam">
+            <div class="tour-item-content">
+                <h3>Daily Veda Parayanam & Dining Area</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/annam.jpg" alt="Annam Brahma">
+            <div class="tour-item-content">
+                <h3>Annam Brahma (Daily Free Food Program)</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/library.jpg" alt="Library">
+            <div class="tour-item-content">
+                <h3>Library & Reverse Osmosis Water Plan</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/toilet.jpg" alt="Toilet Blocks">
+            <div class="tour-item-content">
+                <h3>Toilet Blocks</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/computer.jpg" alt="Computer Literacy">
+            <div class="tour-item-content">
+                <h3>Computer Literacy by Mrs Neeraja</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/sports.jpg" alt="Sports">
+            <div class="tour-item-content">
+                <h3>Sports</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/modern.jpg" alt="Modern Subject Classes">
+            <div class="tour-item-content">
+                <h3>Modern Subject Classes</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/principal.jpg" alt="Principal">
+            <div class="tour-item-content">
+                <h3>Principal K Surya Narayana</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/clothing.jpg" alt="Free Clothing">
+            <div class="tour-item-content">
+                <h3>Free Clothing</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/gold.jpg" alt="Gold Medal">
+            <div class="tour-item-content">
+                <h3>Gold Medal Won by our Student (Neel Gokhale at Rajamundry)</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/science.jpg" alt="Science Class">
+            <div class="tour-item-content">
+                <h3>Dr Ganesh Babu TMLN Speaks on Science</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/maths.jpg" alt="Mathematics">
+            <div class="tour-item-content">
+                <h3>K Sumitra teaching Mathematics</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/sanskrit.jpg" alt="Sanskrit">
+            <div class="tour-item-content">
+                <h3>Omkar teaches Sanskrit</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/exam.jpg" alt="Sanskrit Exam">
+            <div class="tour-item-content">
+                <h3>Annual Sanskrit Exam under Sura Saraswati Sabha Format</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/seminar.jpg" alt="Seminars">
+            <div class="tour-item-content">
+                <h3>Periodical Seminars</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/classroom.jpg" alt="Class Rooms">
+            <div class="tour-item-content">
+                <h3>Class Rooms</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/independence.jpg" alt="Independence Day">
+            <div class="tour-item-content">
+                <h3>Independence Day Celebrations</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/review.jpg" alt="Review Meetings">
+            <div class="tour-item-content">
+                <h3>Review Meetings</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/management.jpg" alt="Management Committee">
+            <div class="tour-item-content">
+                <h3>Management Committee Meeting</h3>
+            </div>
+        </div>
+
+        <div class="tour-item">
+            <img src="images/tour/team.jpg" alt="Team Spirit">
+            <div class="tour-item-content">
+                <h3>Team Spirit and Bon Homie is key to any Institution</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="tour-cta">
+        <h2>Join the project to support our Dharmik heritage</h2>
+        <p style="font-size: 1.3em; margin-top: 20px;">Veda is the Gift to the Human Kind for a harmonious Living and Emancipation.<br>It is our duty to protect and preserve the tradition.</p>
+        <div class="tour-cta-buttons">
+            <a href="index.html">Home</a>
+            <a href="https://dharmaposhanam.in" target="_blank">Dharma Poshanam</a>
+            <a href="http://dharmaposhanam.in/dpisupport.html" target="_blank">International Donation</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
     </div>
 
     <footer style="text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #ffd700;">
         <p>All rights reserved @2025 Veda Vijnaana Vishtaram, Unit of Sanatana Guru Sampradaya Pratishthanam</p>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <span class="modal-nav modal-prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="modal-nav modal-next" onclick="changeImage(1)">&#10095;</span>
+        <div class="modal-content">
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
     <script>
-        // Scroll to top functionality
         const scrollBtn = document.getElementById('scrollToTop');
-        
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollBtn.classList.add('show');
-            } else {
-                scrollBtn.classList.remove('show');
+            scrollBtn.classList.add(window.pageYOffset > 300 ? 'show' : '');
+            scrollBtn.classList.remove(window.pageYOffset > 300 ? '' : 'show');
+        });
+        scrollBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+        const images = Array.from(document.querySelectorAll('.tour-item'));
+        let currentIndex = 0;
+
+        images.forEach((item, index) => {
+            item.addEventListener('click', () => openModal(index));
+        });
+
+        function openModal(index) {
+            currentIndex = index;
+            const item = images[index];
+            const img = item.querySelector('img');
+            const title = item.querySelector('h3').textContent;
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('imageModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            openModal(currentIndex);
+        }
+
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target.id === 'imageModal') closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('imageModal');
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
             }
         });
-        
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Auto-scroll to content on mobile after page load
-        if (window.innerWidth <= 768 && document.referrer && !window.location.hash) {
-            window.addEventListener('load', () => {
-                const mainContent = document.getElementById('main-content') || document.querySelector('.container');
-                if (mainContent) {
-                    setTimeout(() => {
-                        mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            });
-        }
     </script>
-
 </body>
 </html>
