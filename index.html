@@ -1,268 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Veda Vijnaana Vishtaram - Premier institution for Vedic education in Mysore, India. Learn Rigveda, Yajurveda, Samaveda, Atharvaveda with traditional Gurukula system.">
-    <meta name="keywords" content="Veda, Vedic education, Gurukula, Rigveda, Yajurveda, Samaveda, Atharvaveda, Sanskrit, Vedanga, Mysore, India">
-    <meta name="author" content="Veda Vijnaana Vishtaram">
-    <title>Veda Vishtaram - Celebrating Decade of Service (2015-2025)</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Top Banner -->
-    <div class="header-banner">
-        <h1>Celebrating a Decade of Service (2015 - 2025) दशमानोत्सवः</h1>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.8.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.8.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.8.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-
-    <!-- Main Header -->
-    <header class="main-header" role="banner">
-        <div class="logo-section">
-           <img src="https://vedavishtaram.in/images/logo_vvv.jpg" alt="Veda Vijnaana Vishtaram Logo">
-        </div>
-        
-        <h1>Veda Vijnaana Vishtaram</h1>
-        <h2>Unit of Sanatana Guru Sampradaya Pratishthanam</h2>
-        <h2>वेद विज्ञान विष्टरम् - चतुर्वेद विद्यालयः</h2>
-        <p class="tagline">&lt;An Institution of Eminence to learn Veda, Vedanga, Vedic Philosophy&gt;</p>
-    </header>
-
-    <!-- Motto -->
-    <div class="motto">
-        <p>स्वाध्यायान्मा प्रमादः | Never Neglect Your Source of Wisdom</p>
-        <p>vedavishtaram@gmail.com</p>
-    </div>
-
-    <!-- Navigation -->
-    <div class="nav-container">
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="#schools">Schools</a>
-            <a href="#online-courses">Online Courses</a>
-            <a href="team/index.html">Faculty</a>
-            <a href="#founder">Founder</a>
-            <a href="#associations">Associations</a>
-            <a href="#projects">Projects</a>
-            <a href="#donations">Donations</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container" id="main-content" role="main">
-        <!-- Schools Section -->
-        <section id="schools" class="section">
-            <h2>Schools ►</h2>
-            <ul>
-                <li><a href="veda/rigveda.html">Rigveda</a></li>
-                <li><a href="veda/yajurveda.html">Yajurveda</a></li>
-                <li><a href="veda/samaveda.html">Samaveda</a></li>
-                <li><a href="veda/atharva.html">Atharvaveda</a></li>
-                <li><a href="veda/smaarta.html">Smaarta</a></li>
-                <li><a href="veda/jyotish.html">Jyotisha</a></li>
-                <li><a href="veda/vyakarana.html">Vyakarana</a></li>
-                <li><a href="veda/shrouta.html">Shrouta</a></li>
-                <li><a href="archana.html">Temple Puja</a></li>
-                <li>Nyaya</li>
-            </ul>
-        </section>
-
-        <!-- Online Courses Section -->
-        <section id="online-courses" class="section">
-            <h2>Online Courses ►</h2>
-            <ul>
-                <li>Bhagavad Geeta / Ramayana</li>
-                <li>Stotra</li>
-                <li>Pooja</li>
-                <li>Sanskrit</li>
-            </ul>
-        </section>
-
-        <!-- Founder Section -->
-        <section id="founder" class="section">
-            <h2>Founder &amp; Vision</h2>
-            <div class="highlight-box" style="background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%); border-left: 4px solid #ffd700;">
-                <h3 style="color: #1e5a8e; margin-bottom: 15px;">Dr. Vamshi Krishna Ghanapaathi</h3>
-                <p style="color: #1a3a52; line-height: 1.8;">Founder and guiding force behind Veda Vijnaana Vishtaram. A distinguished scholar with expertise in Rigveda Ghanapatha, Ayurveda research, and Sanskrit. His vision has shaped this institution into a center of excellence for Vedic education.</p>
-                <p style="margin-top: 15px;">
-                    <a href="team/vkg.html" style="color: #2c5f8d; text-decoration: none; border-bottom: 2px solid #4682b4; padding-bottom: 2px; font-weight: 600;">Learn more about the Founder →</a>
-                </p>
-            </div>
-        </section>
-
-        <!-- University Associations Section -->
-        <section id="associations" class="section">
-            <h2>Academic Associations &amp; Affiliations</h2>
-            <div class="highlight-box" style="background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%); border-left: 4px solid #ffd700;">
-                <p style="color: #1a3a52; margin-bottom: 20px; font-size: 1.1em;">Veda Vijnaana Vishtaram is proud to be associated with premier institutions dedicated to Sanskrit and Vedic studies:</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px;">
-                <div style="background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%); padding: 25px; border-radius: 10px; border-left: 4px solid #4682b4; box-shadow: 0 4px 12px rgba(70,130,180,0.15);">
-                    <h3 style="color: #1e5a8e; margin-bottom: 15px; font-size: 1.3em;"><a href="https://www.svvedicuniversity.ac.in/" target="_blank" style="color: #1e5a8e; text-decoration: none;">SV Vedic University</a></h3>
-                    <p style="color: #1a3a52; line-height: 1.7;">A premier institution dedicated to the study and preservation of Vedic knowledge and traditions in Karnataka.</p>
-                </div>
-
-                <div style="background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%); padding: 25px; border-radius: 10px; border-left: 4px solid #4682b4; box-shadow: 0 4px 12px rgba(70,130,180,0.15);">
-                    <h3 style="color: #1e5a8e; margin-bottom: 15px; font-size: 1.3em;"><a href="https://ksu.ac.in/" target="_blank" style="color: #1e5a8e; text-decoration: none;">Karnataka Sanskrit University</a></h3>
-                    <p style="color: #1a3a52; line-height: 1.7;">Esteemed state university promoting Sanskrit education and research, fostering traditional scholarship.</p>
-                </div>
-
-                <div style="background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%); padding: 25px; border-radius: 10px; border-left: 4px solid #4682b4; box-shadow: 0 4px 12px rgba(70,130,180,0.15);">
-                    <h3 style="color: #1e5a8e; margin-bottom: 15px; font-size: 1.3em;"><a href="https://www.sanskrit.nic.in/" target="_blank" style="color: #1e5a8e; text-decoration: none;">Central Sanskrit University</a></h3>
-                    <p style="color: #1a3a52; line-height: 1.7;">Leading central university dedicated to the promotion and development of Sanskrit language and literature across India.</p>
-                </div>
-            </div>
-
-            <div style="background-color: #f5f9fc; padding: 20px; border-radius: 8px; margin-top: 25px; border: 2px solid #b8d4e8;">
-                <p style="color: #2c5f8d; text-align: center; font-weight: 600; font-size: 1.1em; margin: 0;">
-                    These collaborations enhance our academic rigor and provide our students with broader opportunities in Vedic and Sanskrit studies.
-                </p>
-            </div>
-        </section>
-
-        <!-- Ongoing Projects Section -->
-        <section id="projects" class="section">
-            <h2>Ongoing Projects ►</h2>
-            <ul>
-                <li><a href="https://vachas.in">Vachas</a></li>
-                <li><a href="resources">Resources</a></li>
-                <li><a href="tour.html">Virtual Tour</a></li>
-                <li>Sandhi Engine</li>
-                <li><a href="kosha">Vaidika PadaKosha</a></li>
-                <li>Stotra PujaTexts</li>
-                <li>Sama Generator</li>
-                <li><a href="http://dharmaposhanam.in">Dharma Poshanam</a> - For Homa, Puja, GoSeva Abhisheka, Shanti etc.</li>
-                <li>Internship - NLP & BioProjects</li>
-            </ul>
-        </section>
-
-        <!-- Information Section -->
-        <section id="information" class="section">
-            <h2>Information ►</h2>
-            <ul>
-                <li><a href="admit.html">Admissions</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="advisory.html">Advisory Committee</a></li>
-            </ul>
-        </section>
-
-        <!-- Donations Section -->
-        <section id="donations" class="donation-section">
-            <h2>Support Vedic Education</h2>
-            
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p><a href="tel:+919900082071">(+91) 99000 82071</a></p>
-            </div>
-
-            <div class="donation-grid">
-                <div class="donation-card">
-                    <h3>International Donors</h3>
-                    <p>Support through international payment methods</p>
-                    <form action="https://www.paypal.com/donate" method="post" target="_top" style="display: inline;">
-                        <input name="hosted_button_id" type="hidden" value="7BS8HLY2AW7BL" />
-                        <button type="submit" class="btn">VIA PAYPAL</button>
-                    </form>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px; color: #ffd700;">Donation Options</h3>
-            
-            <div class="donation-grid">
-                <div class="donation-card">
-                    <h3>Indian Donors</h3>
-                    <p style="margin-bottom: 15px;">Monthly Donations</p>
-                    <a href="https://pages.razorpay.com/pl_FWMQ6vpYAbEbkz/view" class="btn" target="_blank" style="margin-bottom: 10px; display: inline-block;">Offer Monthly Sambhavana</a>
-                    <p style="margin-bottom: 15px; margin-top: 20px;">General Donations</p>
-                    <a href="https://pages.razorpay.com/pl_FFCvBC1J3ITHbz/view" class="btn" target="_blank">DONATE</a>
-                </div>
-
-                <div class="donation-card">
-                    <h3>Membership &amp; Patronage</h3>
-                    <p>Join as Life Member or Patron</p>
-                    <p>Donate to the Corpus Fund of the School</p>
-                    <a href="donors.html" class="btn">JOIN NOW</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact ►</h2>
-            <div class="highlight-box" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 4px solid #d4af37;">
-                <h3 style="color: #1a3a52; margin-bottom: 20px;">Get in Touch</h3>
-                
-                <div style="margin-bottom: 20px;">
-                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">
-                        Email <a href="mailto:vedavishtaram@gmail.com" style="color: #2c5f8d; font-weight: 600;">vedavishtaram@gmail.com</a> for information or suggestions or expression of interest for collaborations.
-                    </p>
-                </div>
-
-                <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                    <a href="https://wa.me/919900082071" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px;">
-                        <span style="color: #2c5f8d; font-weight: 600;">(+91) 99000 82071</span>
-                    </a>
-                </div>
-
-                <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                    <a href="https://fb.com/vedavishtaram" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook" style="width: 24px; height: 24px;">
-                        <span style="color: #2c5f8d; font-weight: 600;">fb.com/vedavishtaram</span>
-                    </a>
-                </div>
-
-                <div>
-                    <p style="color: #555; line-height: 1.8;">
-                        <strong style="color: #1a3a52;">Address ►</strong><br>
-                        Veda Vijnaana Vishtaram, LalitaRamam, 3rd Cross, Datta Nagara, Mysore, Karnataka 570025, India.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>All rights reserved @2021 Veda Vijnaana Vishtaram</p>
-        <p>Unit of Sanatana Guru Sampradaya Pratishthanam</p>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
     <script>
-        // Scroll to top functionality
-        const scrollBtn = document.getElementById('scrollToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollBtn.classList.add('show');
-            } else {
-                scrollBtn.classList.remove('show');
-            }
-        });
-        
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        // Auto-scroll to content on mobile after page load
-        if (window.innerWidth <= 768 && document.referrer && !window.location.hash) {
-            window.addEventListener('load', () => {
-                const mainContent = document.getElementById('main-content');
-                if (mainContent) {
-                    setTimeout(() => {
-                        mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            });
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
+      });
     </script>
-
-</body></html>
+  </body>
+</html>
